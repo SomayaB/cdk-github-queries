@@ -3,7 +3,7 @@ GitHub triage Chrome App
 
 A trivial Chrome app to keep track of common GitHub issue queries.
 
-![Screenshot](chrome-app-example.png)
+![Screenshot](example.png)
 
 ## Installation
 
