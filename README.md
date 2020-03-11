@@ -1,9 +1,9 @@
-CDK GitHub queries
+GitHub triage Chrome App
 ===================
 
 A trivial Chrome app to keep track of common GitHub issue queries.
 
-![Screenshot](screenshot2.png)
+![Screenshot](chrome-app-example.png)
 
 ## Installation
 
