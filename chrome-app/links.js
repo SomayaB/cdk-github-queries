@@ -12,7 +12,7 @@ function gitHubQuery(base, clauses) {
 
 const pr = ["is:open", "is:pr", "archived:false"];
 const issue = ["is:open", "is:issue", "archived:false"];
-const ourRepos = ["repo:aws/aws-cdk", "repo:aws/jsii", , "repo:aws-samples/aws-cdk-examples", "repo:aws-samples/aws-cdk-intro-workshop"];
+const ourRepos = ["repo:aws/aws-cdk", "repo:aws/jsii", , "repo:aws-samples/aws-cdk-examples", "repo:aws-samples/aws-cdk-intro-workshop", "repo:awslabs/cdk8s"];
 const hideInProgress = [ "-label:status/in-progress" ];
 const sortByOldestFirst = [ "sort:created-asc" ];
 const sortByRecentUpdates = [ "sort:updated-desc" ];
@@ -57,7 +57,7 @@ const LINKS = [
     },
     {
       title: "response",
-      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:response-requested", ...sortByLeastRecentUpdates]),
+      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:response-requested", "-label:closing-soon", ...sortByLeastRecentUpdates]),
       description: "Issues that need to be checked for a response",
     },
     {
@@ -67,7 +67,7 @@ const LINKS = [
     },
     {
       title: "mine",
-      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "assignee:USERNAME"]),
+      href: gitHubQuery("https://github.com/issues", [...ourRepos, "assignee:USERNAME"]),
       description: "Issues you need to work on"
     },
   ],
