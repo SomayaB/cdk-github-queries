@@ -67,7 +67,7 @@ const LINKS = [
     },
     {
       title: "mine",
-      href: gitHubQuery("https://github.com/issues", [...ourRepos, "assignee:USERNAME"]),
+      href: gitHubQuery("https://github.com/issues", ["is:open", ...ourRepos, "assignee:USERNAME"]),
       description: "Issues you need to work on"
     },
   ],
