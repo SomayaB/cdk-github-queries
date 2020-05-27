@@ -41,6 +41,10 @@ const LINKS = [
     {
       title: "workshop",
       href: "https://github.com/aws-samples/aws-cdk-intro-workshop/pulls?q=is:open+is:pr+no:assignee"
+    },
+    {
+      title: "cdk8s",
+      href: "https://github.com/awslabs/cdk8s/pulls?q=is:open+is:pr+no:assignee"
     }
   ],
   [
