@@ -10,9 +10,11 @@ function gitHubQuery(base, clauses) {
   });
 }
 
+const filterInTeamComments = ["commenter:eladb", "commenter:rix0rrr", "commenter:shivlaks", "commenter:nija-at", "commenter:RomainMuller", "commenter:skinny85", "commenter:NetaNir","commenter:MrArnoldPalmer", "commenter:iliapolo", "commenter:Jerry-AWS", "commenter:NGL321", "commenter:SomayaB", "commenter:garnaat", "commenter:costleya", "commenter:bmaizels", "commenter:ccfife", "commenter:fulghum", "commenter:pkandasamy91", "commenter:SoManyHs", "commenter:uttarasridhar"]
+const filterOutTeamComments = ["-commenter:eladb", "-commenter:rix0rrr", "-commenter:shivlaks", "-commenter:nija-at", "-commenter:RomainMuller", "-commenter:skinny85", "-commenter:NetaNir","-commenter:MrArnoldPalmer", "-commenter:iliapolo", "-commenter:Jerry-AWS", "-commenter:NGL321", "-commenter:SomayaB","-commenter:ccfife", "f-commenter:ulghum", "-commenter:pkandasamy91", "-commenter:SoManyHs", "-commenter:uttarasridhar"];
 const pr = ["is:open", "is:pr", "archived:false"];
 const issue = ["is:open", "is:issue", "archived:false"];
-const ourRepos = ["repo:aws/aws-cdk", "repo:aws/jsii", , "repo:aws-samples/aws-cdk-examples", "repo:aws-samples/aws-cdk-intro-workshop", "repo:awslabs/cdk8s"];
+const ourRepos = ["repo:aws/aws-cdk", "repo:aws/jsii", "repo:aws-samples/aws-cdk-examples", "repo:aws-samples/aws-cdk-intro-workshop", "repo:awslabs/cdk8s"];
 const hideInProgress = [ "-label:status/in-progress" ];
 const sortByOldestFirst = [ "sort:created-asc" ];
 const sortByRecentUpdates = [ "sort:updated-desc" ];
@@ -56,8 +58,13 @@ const LINKS = [
     },
     {
       title: "UT",
-      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage"]),
-      description: "Issues that need to be triaged",
+      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterOutTeamComments]),
+      description: "Issues that need to be triaged by me"
+    },
+    {
+      title: "TR",
+      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterInTeamComments]),
+      description: "Issues that need to be marked as triaged",
     },
     {
       title: "response",
