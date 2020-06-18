@@ -60,12 +60,12 @@ const LINKS = [
     },
     {
       title: "UT",
-      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterOutTeamAuthors, "comments:0"]),
+      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", "-author:eladb", "-author:rix0rrr", "-author:shivlaks", "-author:nija-at", "-author:RomainMuller", "-author:skinny85", "-author:NetaNir","-author:MrArnoldPalmer", "-author:iliapolo", "-author:Jerry-AWS", "-author:NGL321", "-author:SomayaB","-author:ccfife", "-author:fulghum", "-author:pkandasamy91", "-author:SoManyHs", "-author:uttarasridhar", "comments:0"]),
       description: "Issues that need to be triaged by me"
     },
     {
       title: "UT2",
-      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterOutTeamComments, ...filterOutTeamAuthors]),
+      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterOutTeamComments, "-author:eladb", "-author:rix0rrr", "-author:shivlaks", "-author:nija-at", "-author:RomainMuller", "-author:skinny85", "-author:NetaNir","-author:MrArnoldPalmer", "-author:iliapolo", "-author:Jerry-AWS", "-author:NGL321", "-author:SomayaB","-author:ccfife", "-author:fulghum", "-author:pkandasamy91", "-author:SoManyHs", "-author:uttarasridhar"]),
       description: "Issues that need to be triaged by me"
     },
     {
@@ -75,7 +75,7 @@ const LINKS = [
     },
     {
       title: "TR",
-      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterInTeamComments]),
+      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", "author:eladb", "author:rix0rrr", "author:shivlaks", "author:nija-at", "author:RomainMuller", "author:skinny85", "author:NetaNir","author:MrArnoldPalmer", "author:iliapolo", "author:Jerry-AWS", "author:NGL321", "author:SomayaB", "author:ccfife", "author:fulghum", "author:pkandasamy91", "author:SoManyHs", "author:uttarasridhar"]),
       description: "Issues that need to be marked as triaged",
     },
     {
