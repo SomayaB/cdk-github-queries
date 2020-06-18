@@ -60,11 +60,6 @@ const LINKS = [
     },
     {
       title: "UT",
-      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", "comments:0"]),
-      description: "Issues that need to be triaged by me"
-    },
-    {
-      title: "UT2",
       href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterOutTeamComments]),
       description: "Issues that need to be triaged by me"
     },
