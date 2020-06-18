@@ -10,8 +10,8 @@ function gitHubQuery(base, clauses) {
   });
 }
 
-const filterInTeamAuthors = ["author:eladb", "author:rix0rrr", "author:shivlaks", "author:nijaat", "author:RomainMuller", "author:skinny85", "author:NetaNir","author:MrArnoldPalmer", "author:iliapolo", "author:JerryAWS", "author:NGL321", "author:SomayaB", "author:garnaat", "author:costleya", "author:bmaizels", "author:ccfife", "author:fulghum", "author:pkandasamy91", "author:SoManyHs", "author:uttarasridhar"];
-const filterOutTeamAuthors = ["-author:eladb", "-author:rix0rrr", "-author:shivlaks", "-author:nija-at", "-author:RomainMuller", "-author:skinny85", "-author:NetaNir","-author:MrArnoldPalmer", "-author:iliapolo", "-author:Jerry-AWS", "-author:NGL321", "-author:SomayaB", "-author:garnaat", "-author:costleya", "-author:bmaizels", "-author:ccfife", "-author:fulghum", "-author:pkandasamy91", "-author:SoManyHs", "-author:uttarasridhar"];
+const filterInTeamAuthors = ["author:eladb", "author:rix0rrr", "author:shivlaks", "author:nijaat", "author:RomainMuller", "author:skinny85", "author:NetaNir","author:MrArnoldPalmer", "author:iliapolo", "author:JerryAWS", "author:NGL321", "author:SomayaB", "author:ccfife", "author:fulghum", "author:pkandasamy91", "author:SoManyHs", "author:uttarasridhar"];
+const filterOutTeamAuthors = ["-author:eladb", "-author:rix0rrr", "-author:shivlaks", "-author:nija-at", "-author:RomainMuller", "-author:skinny85", "-author:NetaNir","-author:MrArnoldPalmer", "-author:iliapolo", "-author:Jerry-AWS", "-author:NGL321", "-author:SomayaB", "-author:ccfife", "-author:fulghum", "-author:pkandasamy91", "-author:SoManyHs", "-author:uttarasridhar"];
 const filterInTeamComments = ["commenter:eladb", "commenter:rix0rrr", "commenter:shivlaks", "commenter:nija-at", "commenter:RomainMuller", "commenter:skinny85", "commenter:NetaNir","commenter:MrArnoldPalmer", "commenter:iliapolo", "commenter:Jerry-AWS", "commenter:NGL321", "commenter:SomayaB", "commenter:garnaat", "commenter:costleya", "commenter:bmaizels", "commenter:ccfife", "commenter:fulghum", "commenter:pkandasamy91", "commenter:SoManyHs", "commenter:uttarasridhar"]
 const filterOutTeamComments = ["-commenter:eladb", "-commenter:rix0rrr", "-commenter:shivlaks", "-commenter:nija-at", "-commenter:RomainMuller", "-commenter:skinny85", "-commenter:NetaNir","-commenter:MrArnoldPalmer", "-commenter:iliapolo", "-commenter:Jerry-AWS", "-commenter:NGL321", "-commenter:SomayaB","-commenter:ccfife", "f-commenter:ulghum", "-commenter:pkandasamy91", "-commenter:SoManyHs", "-commenter:uttarasridhar"];
 const pr = ["is:open", "is:pr", "archived:false"];
@@ -69,8 +69,18 @@ const LINKS = [
       description: "Issues that need to be triaged by me"
     },
     {
+      title: "TRCDK",
+      href: "https://github.com/aws/aws-cdk/issues?q=is:open+is:issue+label:needs-triage+commenter:eladb+commenter:rix0rrr+commenter:shivlaks+commenter:nija-at+commenter:RomainMuller+commenter:skinny85+commenter:NetaNir+commenter:MrArnoldPalmer+commenter:iliapolo+commenter:Jerry-AWS+commenter:NGL321+commenter:SomayaB+commenter:garnaat+commenter:costleya+commenter:bmaizels+commenter:ccfife+commenter:fulghum+commenter:pkandasamy91+commenter:SoManyHs+commenter:uttarasridhar",
+      description: "Issues that need to be marked as triaged",
+    },
+    {
       title: "TR",
-      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterInTeamComments, ...filterInTeamAuthors]),
+      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterInTeamComments]),
+      description: "Issues that need to be marked as triaged",
+    },
+    {
+      title: "TR",
+      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterInTeamAuthors]),
       description: "Issues that need to be marked as triaged",
     },
     {
