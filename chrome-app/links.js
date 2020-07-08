@@ -16,7 +16,7 @@ const filterInTeamAuthors = ["author:eladb", "author:rix0rrr", "author:shivlaks"
 const filterOutTeamAuthors = ["-author:eladb", "-author:rix0rrr", "-author:shivlaks", "-author:nija-at", "-author:RomainMuller", "-author:skinny85", "-author:NetaNir","-author:MrArnoldPalmer", "-author:iliapolo", "-author:Jerry-AWS", "-author:NGL321", "-author:SomayaB","-author:ccfife", "-author:fulghum", "-author:pkandasamy91", "-author:SoManyHs", "-author:uttarasridhar"];
 const pr = ["is:open", "is:pr", "archived:false"];
 const issue = ["is:open", "is:issue", "archived:false"];
-const ourRepos = ["repo:aws/aws-cdk", "repo:aws/jsii", "repo:aws-samples/aws-cdk-examples", "repo:aws-samples/aws-cdk-intro-workshop", "repo:awslabs/cdk8s"];
+const ourRepos = ["repo:aws/aws-cdk", "repo:aws/jsii", "repo:aws-samples/aws-cdk-examples", "repo:aws-samples/aws-cdk-intro-workshop", "repo:awslabs/cdk8s", "repo:aws/jsii-release", "repo:aws/jsii-docgen", "repo:aws/json2jsii", "repo:aws/jsii-srcmak"];
 const hideInProgress = [ "-label:status/in-progress" ];
 const sortByOldestFirst = [ "sort:created-asc" ];
 const sortByRecentUpdates = [ "sort:updated-desc" ];
@@ -49,6 +49,22 @@ const LINKS = [
     {
       title: "cdk8s",
       href: "https://github.com/awslabs/cdk8s/pulls?q=is:open+is:pr+no:assignee"
+    },
+    {
+      title: "jsii-release",
+      href: "https://github.com/aws/jsii-release/pulls?q=is:open+is:pr+no:assignee"
+    },
+    {
+      title: "jsii-docgen",
+      href: "https://github.com/aws/jsii-docgen/pulls?q=is:open+is:pr+no:assignee"
+    },
+    {
+      title: "json2jsii",
+      href: "https://github.com/aws/json2jsii/pulls?q=is:open+is:pr+no:assignee"
+    },
+    {
+      title: "jsii-srcmak",
+      href: "https://github.com/aws/jsii-srcmak/pulls?q=is:open+is:pr+no:assignee"
     }
   ],
   [
