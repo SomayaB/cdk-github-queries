@@ -7,7 +7,8 @@ A trivial Chrome app to keep track of common GitHub issue queries.
 
 ## Installation
 
-In Chrome, go to [chrome://extensions/](chrome://extensions/), enable **Developer Mode** and click **Load unpacked**.
+- Clone repo.
+- In Chrome, go to [chrome://extensions/](chrome://extensions/), enable **Developer Mode** and click **Load unpacked**.
 Load the **chrome-app** directory.
 
 After that, it will appear on your **Apps** tab.
