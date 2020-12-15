@@ -28,7 +28,7 @@ const LINKS = [
     {
       title: "Total",
       href: gitHubQuery("https://github.com/pulls", [...pr, ...ourRepos, "no:assignee"]),
-      description: "Pull requests that need to be assigned to the area owner",
+      description: "Unassigned Pull Requests",
     },
     {
       title: "cdk",
