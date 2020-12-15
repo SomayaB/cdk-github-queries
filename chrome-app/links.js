@@ -80,27 +80,17 @@ const LINKS = [
     {
       title: "UA",
       href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "no:assignee"]),
-      description: "Issues that need to be assigned to the area owner"
+      description: "Unassigned issues"
     },
     {
       title: "UT",
       href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterOutTeamComments]),
-      description: "Issues that need to be triaged by me"
-    },
-    {
-      title: "TRCDK",
-      href: "https://github.com/aws/aws-cdk/issues?q=is:open+is:issue+label:needs-triage+commenter:eladb+commenter:rix0rrr+commenter:shivlaks+commenter:nija-at+commenter:RomainMuller+commenter:skinny85+commenter:NetaNir+commenter:MrArnoldPalmer+commenter:iliapolo+commenter:Jerry-AWS+commenter:NGL321+commenter:SomayaB+commenter:garnaat+commenter:costleya+commenter:bmaizels+commenter:ccfife+commenter:fulghum+commenter:pkandasamy91+commenter:SoManyHs+commenter:uttarasridhar",
-      description: "Issues that need to be marked as triaged",
-    },
-    {
-      title: "TR",
-      href: gitHubQuery("https://github.com/issues", [...issue, ...ourRepos, "label:needs-triage", ...filterInTeamComments]),
-      description: "Issues that need to be marked as triaged",
+      description: "Untriaged issues"
     },
     {
       title: "mine",
       href: gitHubQuery("https://github.com/issues", ["is:open", ...ourRepos, "assignee:USERNAME"]),
-      description: "Issues you need to work on"
+      description: "Issues assigned to me"
     },
   ],
   [
@@ -110,7 +100,7 @@ const LINKS = [
     },
     {
       title: 'Workflow',
-      href: 'https://github.com/aws/aws-cdk/wiki/Triage-Workflow'
+      href: 'https://w.amazon.com/bin/view/AWS/DeveloperResources/AWSSDKsAndTools/CDK/Operations/Support/#HIssueTriage'
     }
   ]
 ];
